@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources and Useful Guides</title>
+  <meta name="description" content="Explore our curated collection of resources including Google Docs, Sheets, Presentations, Forms, Drawings, Maps, Photos, and Drive links to support your learning and projects.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      background: linear-gradient(135deg, #f8f6ff 0%, #f0ebff 100%);
+      color: #4a4a4a;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #e8deff 0%, #f5f0ff 100%);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(139, 104, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(139, 104, 255, 0.1);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #8b68ff 0%, #b794ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      color: #6a5acd;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+    
+    .resource-card {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(139, 104, 255, 0.12);
+      border: 1px solid rgba(139, 104, 255, 0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .resource-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8b68ff 0%, #b794ff 50%, #d4b3ff 100%);
+    }
+    
+    .resource-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(139, 104, 255, 0.2);
+      background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .resource-card h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #6a5acd;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .resource-card h2::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: linear-gradient(135deg, #8b68ff 0%, #b794ff 100%);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    
+    .resource-card p {
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .resource-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .resource-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, #f8f6ff 0%, #ede5ff 100%);
+      color: #6a5acd;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(139, 104, 255, 0.1);
+    }
+    
+    .resource-link::before {
+      content: '→';
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    
+    .resource-link:hover {
+      background: linear-gradient(135deg, #8b68ff 0%, #b794ff 100%);
+      color: white;
+      transform: translateX(4px);
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(139, 104, 255, 0.3);
+    }
+    
+    .resource-link:hover::before {
+      transform: translateX(4px);
+    }
+    
+    .conclusion-section {
+      grid-column: 1 / -1;
+      text-align: center;
+      background: linear-gradient(135deg, #f8f6ff 0%, #ede5ff 100%);
+      border: 2px solid rgba(139, 104, 255, 0.15);
+      padding: 40px;
+      margin-top: 20px;
+    }
+    
+    .conclusion-section h2 {
+      color: #6a5acd;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    
+    .conclusion-section p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      
+      header {
+        padding: 30px 20px;
+      }
+      
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      
+      .resource-card {
+        padding: 24px;
+      }
+      
+      .conclusion-section {
+        padding: 30px 20px;
+      }
+    }
+    
+    /* Subtle animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .resource-card {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    
+    .resource-card:nth-child(1) { animation-delay: 0.1s; }
+    .resource-card:nth-child(2) { animation-delay: 0.2s; }
+    .resource-card:nth-child(3) { animation-delay: 0.3s; }
+    .resource-card:nth-child(4) { animation-delay: 0.4s; }
+    .resource-card:nth-child(5) { animation-delay: 0.5s; }
+    .resource-card:nth-child(6) { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Our Curated Resources Hub</h1>
+      <p>
+        Welcome to our resources page. Here you will find a carefully collected set of materials that cover different aspects of our work. 
+        From detailed step-by-step documents and data-driven spreadsheets to interactive forms and creative drawings, each link serves a 
+        purpose in providing practical support. This page is designed to be a central hub where you can access everything easily.
+      </p>
+    </header>
+
+    <div class="resources-grid">
+      <div class="resource-card">
+        <h2>Guides and Documents</h2>
+        <p>
+          We have prepared detailed written guides in the form of Google Docs. These documents cover important information and 
+          provide step-by-step help for common tasks.
+        </p>
+        <div class="resource-links">
+          <a href="https://docs.google.com/document/d/e/2PACX-1vSnE75XYneoI4c4PQJBp_7BCNeKi0_1_C7TL5-Xinho-FPrQttV0EznPWvrAH1f9xG_M2CtyjGoEIfs/pub" target="_blank" rel="noopener" class="resource-link">
+            Blackout Curtains Installation Guide
+          </a>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <h2>Data and Calculators</h2>
+        <p>
+          Numbers and analysis are important in planning. That is why we have included Google Sheets resources for calculations and data analysis.
+        </p>
+        <div class="resource-links">
+          <a href="https://docs.google.com/spreadsheets/d/1sOeP_U59NX9qwsMQWphJAaOMFTIWo6RcnJYeiIYriAU/edit?usp=sharing" target="_blank" rel="noopener" class="resource-link">
+            Measurement and Cost Sheet
+          </a>
+          <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vT2T62glM6Y9_wrJUKHlIaTqDeErB9bj4ZqTa6JtvFsPiBvQY6Zv1-nfKjHrd0R38zXKxPhyEjDhZM4/pubhtml" target="_blank" rel="noopener" class="resource-link">
+            Published Estimation Sheet
+          </a>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <h2>Presentations and Visuals</h2>
+        <p>
+          Some information is better understood visually. We have prepared presentations and diagrams to help explain concepts clearly.
+        </p>
+        <div class="resource-links">
+          <a href="https://docs.google.com/presentation/d/e/2PACX-1vQGEQRZhX7bnW0jPs1YznfTl0JdprLMgJTYjK2N1sy2tGU9-dY4wNUF4U9bmKkvA1xvjqBmJOKYr5Q4/pub?start=false&loop=false&delayms=3000&slide=id.p" target="_blank" rel="noopener" class="resource-link">
+            Google Slides Presentation
+          </a>
+          <a href="https://docs.google.com/drawings/d/e/2PACX-1vRbC0RSeuae_r72j9Fy2wqwokI2B5-vlDPiDrPB_GYmXY450dS54RSt83VoWzhBdIztojMjQcr0zqjY/pub?w=960&h=720" target="_blank" rel="noopener" class="resource-link">
+            Google Drawing Resource
+          </a>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <h2>Interactive Forms</h2>
+        <p>
+          If you want to give feedback or input, you can fill out our interactive forms designed to collect responses and understand user needs better.
+        </p>
+        <div class="resource-links">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_qBOzoJoh_qUG9bcsKoUx1uWlGFbq0iaoe3DrjfL_DDSPhg/viewform?usp=dialog" target="_blank" rel="noopener" class="resource-link">
+            Google Form
+          </a>
+        </div>
+      </div>
+
+      <div class="resource-card">
+        <h2>Maps, Photos and Drive Links</h2>
+        <p>
+          Our resources also include location and media content. Explore places and view related images through our curated collection.
+        </p>
+        <div class="resource-links">
+          <a href="https://www.google.com/maps/d/edit?mid=1j3GCRmkvto5GaYP6bPgIC0M04QNkF7k&usp=sharing" target="_blank" rel="noopener" class="resource-link">
+            Custom Google Map
+          </a>
+          <a href="https://photos.google.com/share/AF1QipN6bAAOaHqrQCchiKk-sInU8BTBBlErWZpGtvYkAW1a5PZHxSQhapPMEqdg1Im6BQ?key=d1RreEtQc19wbnVMRzVPa21EbTFVQXo2UGJHNU13" target="_blank" rel="noopener" class="resource-link">
+            Shared Google Photos
+          </a>
+          <a href="https://photos.app.goo.gl/AqxGBQQCvNALLvXv7" target="_blank" rel="noopener" class="resource-link">
+            Photo Album
+          </a>
+         
+        </div>
+      </div>
+
+      <div class="resource-card conclusion-section">
+        <h2>Conclusion</h2>
+        <p>
+          This page is created to bring together all our supporting resources in one place. Whether you need a written guide, a 
+          spreadsheet for calculations, a presentation for clear understanding, or photos for visual support, everything is linked here. 
+          By exploring these resources, you will save time and have direct access to helpful tools. We will continue to add more links 
+          as new materials are published, so feel free to revisit this page for updates.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
